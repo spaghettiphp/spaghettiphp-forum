@@ -4,6 +4,10 @@ class Topics extends AppModel {
     protected $board;
     protected $author;
     
+    public function text() {
+        return $this->text;
+    }
+    
     public function author() {
         if(is_null($this->author)) {
             $this->author = Model::load('Users')->firstById($this->user_id);

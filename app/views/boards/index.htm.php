@@ -18,7 +18,7 @@
             </td>
             <td class="latest-activity">
                 <?php if($last_topic = $board->lastTopic()): ?>
-                    <?php echo $this->html->link($last_topic->title, '/topics/view/' . $last_topic->slug, array(
+                    <?php echo $this->html->link(Sanitize::html($last_topic->title), '/topics/view/' . $last_topic->slug, array(
                         'class' => 'title'
                     )) ?>
                     <span class="date">

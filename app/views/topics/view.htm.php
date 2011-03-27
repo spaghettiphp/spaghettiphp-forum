@@ -22,8 +22,7 @@
             
             <td class="topic">
                 <h1><?php echo $this->pageTitle = Sanitize::html($topic->title) ?></h1>
-                <?php // echo ${$format}->formatThis($topic["text"]) ?>
-                <?php echo $topic->text ?>
+                <?php echo $topic->text() ?>
             </td>
         </tr>
 
@@ -41,8 +40,7 @@
                 </td>
 
                 <td class="topic">
-                    <?php // echo ${$format}->formatThis($topic["text"]) ?>
-                    <?php echo $response->text ?>
+                    <?php echo $response->text() ?>
                 </td>
             </tr>
         <?php endforeach ?>

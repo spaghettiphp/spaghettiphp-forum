@@ -18,7 +18,7 @@
                 <tr>
                     <td>
                         <h1>
-                            <?php echo $this->html->link($topic->title, '/topics/view/' . $topic->slug) ?>
+                            <?php echo $this->html->link(Sanitize::html($topic->title), '/topics/view/' . $topic->slug) ?>
                         </h1>
                         <span class="date">Publicado em <?php echo $this->date->format($topic->created, 'd/m/Y, H:i:s') ?></span>
                     </td>
