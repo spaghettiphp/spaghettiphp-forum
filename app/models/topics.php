@@ -1,17 +1,30 @@
 <?php
 
 class Topics extends AppModel {
-    protected $defaultScope = array(
-        'order' => 'created DESC'
-    );
+    protected $board;
     
     public function author() {
         return Model::load('Users')->firstById($this->user_id);
     }
     
+    public function board() {
+        if(is_null($this->board)) {
+            $this->board = Model::load('Boards')->firstById($this->board_id);;
+        }
+        
+        return $this->board;
+    }
+    
+    public function responses() {
+        return $this->allByTopicId($this->id, array(
+            'order' => 'created ASC'
+        ));
+    }
+    
     public function lastResponse() {
-        // by 'first' we actually mean 'last', but mind the order in the default scope
-        $topic = $this->firstByTopicId($this->id);
+        $topic = $this->firstByTopicId($this->id, array(
+            'order' => 'created DESC'
+        ));
         if($topic) {
            return $topic; 
         }
