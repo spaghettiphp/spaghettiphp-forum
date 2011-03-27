@@ -2,9 +2,14 @@
 
 class Topics extends AppModel {
     protected $board;
+    protected $author;
     
     public function author() {
-        return Model::load('Users')->firstById($this->user_id);
+        if(is_null($this->author)) {
+            $this->author = Model::load('Users')->firstById($this->user_id);
+        }
+        
+        return $this->author;
     }
     
     public function board() {
