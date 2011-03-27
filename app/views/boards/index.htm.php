@@ -1,7 +1,7 @@
 <table id="boards">
     <thead>
         <tr>
-            <th class="title">Fóruns</th>
+            <th class="title"><?php echo $this->pageTitle = 'Fóruns' ?></th>
             <th class="latest-activity">Última atividade</th>
         </tr>
     </thead>
