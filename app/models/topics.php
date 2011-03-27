@@ -16,6 +16,15 @@ class Topics extends AppModel {
         return $this->author;
     }
     
+    public function parent() {
+        if($this->topic_id) {
+            return $this->firstById($this->topic_id);
+        }
+        else {
+            return $this;
+        }
+    }
+    
     public function board() {
         if(is_null($this->board)) {
             $this->board = Model::load('Boards')->firstById($this->board_id);;

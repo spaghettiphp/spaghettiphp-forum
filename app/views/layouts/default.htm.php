@@ -4,7 +4,7 @@
     <?php echo $this->html->charset() ?>
     <title><?php echo $this->pageTitle ?> - Fórum Spaghetti*</title>
     <?php echo $this->html->stylesheet('layout', 'markitup/skins/simple/style', 'markitup/sets/bbcode/style') ?>
-    <link rel="alternate" type="application/atom+xml" title="Spaghetti* - Tópicos e respostas mais recentes" href="<?php echo Mapper::url('/feeds/all.atom', true) ?>" />
+    <link rel="alternate" type="application/atom+xml" title="Spaghetti* - Tópicos e respostas mais recentes" href="<?php echo Mapper::url('/feeds.atom', true) ?>" />
     <link rel="shortcut icon" href="<?php echo Mapper::url('/images/favicon.png') ?>" type="image/png" />
 </head>
 <body>
