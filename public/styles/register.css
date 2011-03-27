@@ -1,0 +1,94 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	text-align: center;
+}
+
+body {
+	background: #FFF;
+	color: #666;
+	font: 13px "Lucida Grande", "Lucida Sans Unicode", "Arial", "Verdana", "Tahoma", sans-serif;
+	margin: auto;
+	padding-top: 150px;
+	text-align: left;
+	width: 500px;
+}
+
+hr {
+	clear: both;
+	visibility: hidden;
+}
+
+a {
+	color: #7A0;
+	text-decoration: none;
+}
+
+	a img {
+		border: 0;
+	}
+
+#logo {
+	display: block;
+	outline: none;
+	margin-bottom: 15px;
+	margin-left: 10px;
+	width: 115px;
+}
+
+div.error {
+	background: #C00 url(../images/login/error.gif) 10px 10px no-repeat;
+	color: #FFF;
+	margin-bottom: 15px;
+	padding: 10px;
+	padding-left: 35px;
+}
+
+div.error li {
+	list-style: none;
+}
+
+#content {
+	background: #EEE;
+	margin-bottom: 15px;
+	padding: 10px;
+}
+
+	form label {
+		font-size: 11px;
+		float: left;
+		margin-bottom: 10px;
+		width: 210px;
+	}
+	
+	form label input {
+		display: block;
+		padding: 3px;
+		width: 180px;
+	}
+	
+	form input[type="submit"] {
+	    -moz-border-radius: 3px;
+	    -webkit-border-radius: 3px;
+	    background: #9C0;
+        border: 1px outset #9C0;
+        color: #FFF;
+        cursor: pointer;
+        font: bolder 15px "Helvetica", "Arial", "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+        text-shadow: 1px 1px 1px #580;
+        padding: 3px 8px;
+	}
+
+p.login {
+	color: #999;
+	font-size: 14px;
+	margin-left: 10px;
+}
+
+h2 {
+	font: bold 20px "Arial", "Helvetica", sans-serif;
+	margin-bottom: 10px;
+}

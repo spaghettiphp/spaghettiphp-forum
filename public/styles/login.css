@@ -1,0 +1,108 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	text-align: center;
+}
+
+body {
+	background: #FFF;
+	color: #666;
+	font: 13px "Lucida Grande", "Lucida Sans Unicode", "Arial", "Verdana", "Tahoma", sans-serif;
+	margin: auto;
+	padding-top: 150px;
+	text-align: left;
+	width: 500px;
+}
+
+hr {
+	clear: both;
+	visibility: hidden;
+}
+
+a {
+	color: #7A0;
+	text-decoration: none;
+}
+	a img {
+		border: 0;
+	}
+
+#logo {
+	display: block;
+	outline: none;
+	margin-bottom: 15px;
+	margin-left: 10px;
+	width: 115px;
+}
+
+p.error {
+	background: #C00 url(../images/login/error.gif) 10px 10px no-repeat;
+	color: #FFF;
+	padding: 10px;
+	text-indent: 20px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+#content {
+	background: #EEE;
+	margin-bottom: 15px;
+	padding: 10px;
+}
+
+	form label {
+		font-size: 11px;
+		float: left;
+		width: 205px;
+	}	
+	form label input {
+		display: block;
+		padding: 3px;
+		width: 175px;
+	}
+	form button {
+	    -moz-border-radius: 3px;
+	    -webkit-border-radius: 3px;
+	    background: #9C0;
+        border: 1px outset #9C0;
+        color: #FFF;
+        cursor: pointer;
+        font: bolder 15px "Helvetica", "Arial", "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+        margin-top: 13px;
+        text-shadow: 1px 1px 1px #580;
+        padding: 3px 8px;
+	}        
+	
+	form label.keeplogged {
+	    margin-top: 10px;
+	    width: 400px;
+	}
+	
+	form label.keeplogged input {
+	    float: left;
+	    margin-right: 5px; 
+	    width: 15px;
+	}
+	
+	form label.keeplogged span {
+	    color: #999;
+	    font-weight: bold;
+	}
+
+p.register {
+	color: #999;
+	font-size: 14px;
+	margin-left: 10px;
+}
+
+a.forgot_password {
+    float: right;
+    font-size: 10px;
+    margin-top: -15px;
+    margin-right: 87px;
+}
