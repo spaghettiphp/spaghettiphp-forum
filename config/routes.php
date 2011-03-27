@@ -1,3 +1,3 @@
 <?php
 
-Mapper::root('home');
+Mapper::root('boards');
