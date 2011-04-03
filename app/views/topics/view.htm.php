@@ -47,15 +47,20 @@
     </tbody>
 </table>
 
-<?php if($loggedIn = false): ?>
-    <?php echo $form->create("/topics/reply/{$topics[0]['id']}", array("id"=>"reply")) ?>
-    <h3>Responder T&oacute;pico</h3>
-    <?php echo $form->input("title", $topics[0]["title"], array("label" => "Título")) ?>
-    <?php echo $form->input("text", $data["text"], array("type" => "textarea", "label" => "Texto <span>Agora usamos <strong>BBCode</strong>!</span>")) ?>
-    <?php echo $form->close("Responder T&oacute;pico") ?>
+<?php if(Auth::loggedIn()): ?>
+    <?php echo $this->form->create('/topics/reply/' . $topic->slug, array(
+        'id' => 'reply'
+    )) ?>
+        <h3>Responder T&oacute;pico</h3>
+        <?php echo $this->form->input('text', array(
+            'type' => 'textarea',
+            'label' => 'Texto <span>Agora usamos <strong>BBCode</strong>!</span>',
+            'div' => false
+        )) ?>
+    <?php echo $form->close('Responder Tópico') ?>
 <?php else: ?>
     <p class="must-be-logged">
         Você deve estar logado para responder a um tópico ou adicionar um novo.<br />
-        <?php echo $this->html->link('Efetue login', '/login') ?> ou <?php echo $this->html->link('Registre-se', '/register') ?> para participar das discussões.
+        <?php echo $this->html->link('Efetue login', '/users/login') ?> ou <?php echo $this->html->link('Registre-se', '/users/register') ?> para participar das discussões.
     </p>
-<?php endif; ?>
+<?php endif ?>

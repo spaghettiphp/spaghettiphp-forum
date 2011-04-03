@@ -18,19 +18,21 @@
             <p class="forum">Fórum</p>
         </div>
         <div class="right">
-            <?php if($logged_in = false): ?>
+            <?php if(Auth::loggedIn()): ?>
                 <div class="welcome">
                     <div>
                         <span class="hello">Olá,</span>
-                        <strong class="name"><?php echo $user["profiles"]["name"] == "" ? $user["username"] : $user["profiles"]["name"] ?></strong><!-- @todo -->
-                        <span class="links"><?php echo $this->html->link('Opções', '/settings') ?> | <?php echo $this->html->link('Sair', '/logout') ?></span>
+                        <strong class="name"><?php echo Auth::user()->name() ?></strong>
+                        <span class="links"><?php echo $this->html->link('Opções', '/settings') ?> | <?php echo $this->html->link('Sair', '/users/logout') ?></span>
                     </div>
-                    <?php echo $this->html->image('http://www.gravatar.com/avatar/' . md5($user['email']) . '?s=52') ?>
+                    <?php echo $this->gravatar->image(Auth::user()->email, 52, array(
+                        'class' => 'gravatar'
+                    )) ?>
                 </div>
             <?php else: ?>
                 <div class="welcome">
-                    <?php echo $this->html->link('<strong>Efetue login</strong>', '/login') ?> ou
-                    <?php echo $this->html->link('Registre-se', '/register') ?>
+                    <?php echo $this->html->link('<strong>Efetue login</strong>', '/users/login') ?> ou
+                    <?php echo $this->html->link('Registre-se', '/users/register') ?>
                 </div>
             <?php endif ?>
         </div>
